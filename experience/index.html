@@ -17,12 +17,13 @@
   <title>Mengting Ai - Experience</title>
 
   <script>
-    function toggleMenu() {
+   function toggleMenu() {
       var menu = document.getElementById('popup-menu');
-      if (menu.style.display === 'block') {
-        menu.style.display = 'none';
+      if (menu.style.visibility === "hidden") {
+        // console.log('a')
+        menu.style.visibility = "visible";
       } else {
-        menu.style.display = 'block';
+        menu.style.visibility = "hidden";
       }
     }
 
@@ -101,10 +102,10 @@
       </header>
 
 
-        <main style="margin: 10%;">
+        <main >
 
 
-                    <h2 style="padding-top: 4%;">
+                    <h2 style="padding-top:4%;z-index: 0;">
                       &nbsp;&nbsp;&nbsp;WORK EXPERIENCE
                     </h2>
 
