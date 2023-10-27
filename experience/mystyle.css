@@ -50,6 +50,9 @@ h2 {
 main {
   z-index: 0;
   position: relative;
+  margin: 10%;
+  padding: auto;
+  width: 80%;
   /* float: left; */
 }
 
