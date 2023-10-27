@@ -1,11 +1,14 @@
 main {
   z-index: 0;
   position: relative;
+  /* width: 80%; */
+  margin: 10%;
 }
 
 div {
   z-index: 0;
   position: relative;
+  /* width: 80%; */
 }
 
 .myhead{
@@ -31,18 +34,22 @@ div {
 .hamburger i {
   display: block;
   width: 30px;
-  height: 5px;
+  height: 3px;
   background-color: #333;
   margin: 6px 0;
 }
 
 .popup-menu {
-  display: none;
-  position: absolute;
+  /* display: none; */
+  visibility: hidden;
+  position: fixed;
   background-color: #ffffff;
-  padding-top: 5px;
-  z-index: 1000000;
-  right: 0;
+  /* padding-top: 5px; */
+  width: 10%;
+  z-index: 1000;
+  
+  float: right;
+  padding-right: 100px;
   top: 100%;
   opacity: 1;
 }
@@ -61,6 +68,8 @@ div {
   z-index: 1000000;
   z-index: 1000000;
   position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .popup-menu ul li a {
@@ -69,6 +78,7 @@ div {
   z-index: 1000000;
   z-index: 1000000;
   position: relative;
+  color:rgb(131, 131, 131);
 }
 
 .hamburger-click-area:click.popup-menu {
@@ -80,3 +90,17 @@ div {
     display: none;
   }
 }
+
+
+@media (max-width: 768px) {
+  main {
+      width: 80%;
+      margin: 3%;
+    
+      /* other styles for mobile */
+  }
+  .myhead{
+    width: 110%;
+  }
+}
+

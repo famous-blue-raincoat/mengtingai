@@ -4,6 +4,7 @@
   background-color: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  
 }
 
 .project-content h2 {
@@ -31,9 +32,17 @@
   line-height: 1.6;
 }
 
+
+
+
+
+
+
+
 main {
   z-index: 0;
   position: relative;
+  /* float: left; */
 }
 
 div {
@@ -64,7 +73,7 @@ div {
 .hamburger i {
   display: block;
   width: 30px;
-  height: 5px;
+  height: 3px;
   background-color: #333;
   margin: 6px 0;
 }
@@ -73,9 +82,12 @@ div {
   display: none;
   position: absolute;
   background-color: #ffffff;
-  padding-top: 5px;
-  z-index: 1000000;
-  right: 0;
+  /* padding-top: 5px; */
+  width: 10%;
+  z-index: 1000;
+  
+  float: right;
+  padding-right: 100px;
   top: 100%;
   opacity: 1;
 }
@@ -94,6 +106,8 @@ div {
   z-index: 1000000;
   z-index: 1000000;
   position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .popup-menu ul li a {
@@ -102,6 +116,7 @@ div {
   z-index: 1000000;
   z-index: 1000000;
   position: relative;
+  color:rgb(131, 131, 131);
 }
 
 .hamburger-click-area:click.popup-menu {
@@ -113,3 +128,12 @@ div {
     display: none;
   }
 }
+
+
+@media (max-width: 768px) {
+  main {
+      width: 80%;
+      /* other styles for mobile */
+  }
+}
+

@@ -31,7 +31,7 @@ div {
 .hamburger i {
   display: block;
   width: 30px;
-  height: 5px;
+  height: 3px;
   background-color: #333;
   margin: 6px 0;
 }
@@ -64,6 +64,8 @@ div {
   z-index: 1000000;
   z-index: 1000000;
   position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .popup-menu ul li a {
@@ -72,6 +74,7 @@ div {
   z-index: 1000000;
   z-index: 1000000;
   position: relative;
+  color:rgb(131, 131, 131);
 }
 
 .hamburger-click-area:click.popup-menu {
