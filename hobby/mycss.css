@@ -104,3 +104,9 @@ div {
   }
 }
 
+
+.cover-image {
+  width: 100%; /* Make the image scale to the full width */
+  height: 120%; /* Ensure the aspect ratio is preserved */
+  /* object-fit: cover; Optional: ensure the image fills the container */
+}
