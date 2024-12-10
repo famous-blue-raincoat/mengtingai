@@ -70,9 +70,11 @@ main {
   position: relative;
   margin: 5%;
   padding: 5%;
-  width: 80%;
+  /* width: 80%; */
   justify-content: center;
   align-items: center;
+  margin-top: 0%;
+  padding-top: 0%;
   /* float: left; */
 }
 
