@@ -8,6 +8,69 @@ div {
   position: relative;
 }
 
+.page-header {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+
+
+.profile-image {
+  width: 200px; /* Adjust based on your image size */
+  height: 200px; /* Adjust based on your image size */
+  margin-right: 20px; /* Space between the image and text */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 130px; /* Adjust based on your image size */
+    height: 130px; /* Adjust based on your image size */
+  }
+  .header-content {
+    margin: 5%;
+  }
+
+}
+
+.description {
+  padding-top: 0; /* Remove the previous padding-top if unnecessary */
+  margin: 0; /* Ensure no margin for better control */
+  line-height: 1.5; /* Adjust line height for better readability */
+  align-items: center !important;
+  text-align: left !important;
+}
+
+
+.iframe-container {
+  display: flex;
+  padding: auto;
+  margin: auto;
+  justify-content: center; /* Centers the iframe horizontally */
+  align-items: center; /* Optional: centers vertically if needed */
+  height: 100%; /* Ensure the container takes the full height of the parent */
+  width: 100%;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .iframe-container {
+    display: flex;
+    width: 90%;
+    margin: 5%;
+  }  
+
+}
+
+
 .myhead{
   padding-top: 5%;
   border-bottom: 2px solid rgb(190, 187, 187);

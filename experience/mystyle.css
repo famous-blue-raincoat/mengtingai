@@ -1,6 +1,21 @@
+.publication-module {
+  padding-left: 5%;
+  z-index: 0;
+  position: relative;
+}
+
+.publication-module .h3{
+  padding: 0%;
+  margin: 0%;
+  z-index: 0;
+  position: relative;
+}
+
 .project-module {
   padding: 20px;
   margin-bottom: 30px;
+  margin-left: 2%;
+  margin-right: 2%;
   background-color: #f8f8f8;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
@@ -14,7 +29,10 @@
   margin-bottom: 8px;
   z-index: 0;
   position: relative;
-  
+}
+
+.no-break {
+  white-space: nowrap;
 }
 
 
@@ -50,9 +68,11 @@ h2 {
 main {
   z-index: 0;
   position: relative;
-  margin: 10%;
+  margin: auto;
   padding: auto;
   width: 80%;
+  justify-content: center;
+  align-items: center;
   /* float: left; */
 }
 
