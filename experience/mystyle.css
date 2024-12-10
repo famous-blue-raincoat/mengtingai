@@ -68,8 +68,8 @@ h2 {
 main {
   z-index: 0;
   position: relative;
-  margin: auto;
-  padding: auto;
+  margin: 5%;
+  padding: 5%;
   width: 80%;
   justify-content: center;
   align-items: center;
