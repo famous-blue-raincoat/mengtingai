@@ -27,6 +27,8 @@ div {
   width: 200px; /* Adjust based on your image size */
   height: 200px; /* Adjust based on your image size */
   margin-right: 20px; /* Space between the image and text */
+  max-width: 200px; /* Adjust based on your image size */
+  max-height: 200px; /* Adjust based on your image size */
 }
 
 /* Mobile styles */
