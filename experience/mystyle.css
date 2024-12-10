@@ -73,8 +73,8 @@ main {
   /* width: 80%; */
   justify-content: center;
   align-items: center;
-  margin-top: 0%;
-  padding-top: 0%;
+  margin-top: 0% !important;
+  padding-top: 0% !important;
   /* float: left; */
 }
 
