@@ -1,69 +1,64 @@
 .publication-module {
-  padding-left: 5%;
-  z-index: 0;
-  position: relative;
-}
-
-.publication-module .h3{
-  padding: 0%;
-  margin: 0%;
-  z-index: 0;
-  position: relative;
-}
-
-.project-module {
-  padding: 20px;
-  margin-bottom: 30px;
-  margin-left: 2%;
-  margin-right: 2%;
-  background-color: #f8f8f8;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-  z-index: 0;
-  position: relative;
-}
-
-.project-content h2 {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 8px;
-  z-index: 0;
-  position: relative;
-}
-
-.no-break {
-  white-space: nowrap;
+    margin: 0.5rem 5% 1.5rem; /* top | horizontal | bottom */
+    padding: 1.2rem;
+    background: rgba(255,255,255,0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 
-h2 {
-   z-index: 0;
-  position: relative;
-}
+  .publication-module h3 {
+    margin-top: 0;
+      color: #2a2a72;
+      margin-bottom: 0.5rem;
+      font-size: 1.1em;
+      line-height: 1.4;
+  }
 
+  .publication-authors {
+      color: #666;
+      margin-bottom: 0.5rem;
+      font-size: 0.95em;
+  }
 
-.project-content .date {
-  font-size: 0.9em;
-  color: #777;
-  margin-bottom: 10px;
-}
+  .publication-venue {
+      color: #009ffd;
+      font-weight: 600;
+      font-size: 0.9em;
+  }
 
-.project-content .role {
-  font-size: 1.0em;
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 12px;
-}
+  .project-module {
+      margin: 1.5rem 5%;
+      padding: 1.5rem;
+      background: rgba(255,255,255,0.9);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
-.project-content p {
-  font-size: 0.95em;
-  color: #666;
-  line-height: 1.6;
-}
+  .project-content h2 {
+      color: #333;
+      margin-top: 0;
+      font-size: 1.2em;
+      margin-bottom: 0.5rem;
+  }
 
+  .date {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 0.3rem;
+  }
 
+  .role {
+      color: #2a2a72;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+  }
 
-
+  .project-content p {
+      color: #444;
+      line-height: 1.5;
+      font-size: 0.95em;
+  }
 
 main {
   z-index: 0;
