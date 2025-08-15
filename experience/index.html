@@ -7,26 +7,176 @@
   <meta name="twitter:site" content="@AdobePortfolio" />
   <meta property="og:title" content="Mengting Ai - Experience" />
   <link rel="icon"
-    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTkSuQmCC" />
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTSuQmCC" />
+  
   <link rel="stylesheet" href="/dist/css/main.css" type="text/css" />
   <link rel="stylesheet"
     href="https://cdn.myportfolio.com/5453d8bc-a637-4b00-bbc5-1673e83b72a9/80915a3364e68b3f048b38af2caef5a21686121172.css?h=4e9d0a365716d735d5fd37204e1b8873"
     type="text/css" />
-  <link rel="canonical" href="https://mai10d424.myportfolio.com/contact" />
-  <link rel="stylesheet" href="mystyle.css">
+  
+  <style>
+    /* --- Global Styling --- */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .site-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    /* --- Header and Navigation --- */
+    .myhead {
+        padding: 1rem 0;
+        border-bottom: 1px solid #e9ecef;
+        position: relative; /* Added for positioning context for the popup menu */
+    }
+    
+    .nav-container a {
+        transition: color 0.3s ease;
+    }
+    
+    .nav-container a:hover,
+    .nav-container a.active {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+    }
+
+    /* --- Content Section Headers --- */
+    main h2 {
+      font-size: 2rem;
+      color: #343a40;
+      padding-top: 2rem;
+      padding-bottom: 1.5rem;
+      padding-left: 0;
+      border-bottom: 2px solid #e9ecef;
+      margin-bottom: 2rem;
+    }
+
+    /* --- Card Design (for Publications & Work Experience) --- */
+    .publication-module,
+    .project-module {
+      background-color: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    
+    .publication-module:hover,
+    .project-module:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* --- Styling for elements inside the cards --- */
+    .publication-module h3,
+    .project-content h2 {
+      font-size: 1.25rem;
+      margin-top: 0;
+    }
+    
+    .project-content .date {
+        font-style: italic;
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-content .role {
+        font-weight: bold;
+        color: #495057;
+        margin-bottom: 0.5rem;
+    }
+    
+    .publication-module p,
+    .project-content p {
+      margin-bottom: 0;
+    }
+
+    .no-break {
+        font-size: 0.95rem;
+    }
+    
+    /* --- Mobile Menu Styles (NEWLY ADDED & FIXED) --- */
+    .hamburger-click-area {
+      display: none; /* Hidden by default on desktop */
+      cursor: pointer;
+    }
+
+    .popup-menu {
+      position: absolute; /* Changed to absolute positioning */
+      top: 100%; /* Position it right below the header */
+      right: 0;
+      background-color: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 0.5rem 0;
+    }
+    
+    .popup-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .popup-menu li a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: #333;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    
+    .popup-menu li a:hover {
+      background-color: #f8f9fa;
+    }
+
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      .site-content {
+        padding: 1rem;
+      }
+      main h2 {
+        font-size: 1.5rem;
+      }
+      .publication-module,
+      .project-module {
+        padding: 1rem 1.5rem;
+      }
+      
+      /* Show hamburger and hide desktop nav on mobile */
+      .myhead .nav-container {
+        display: none;
+      }
+      .hamburger-click-area {
+        display: block;
+      }
+    }
+  </style>
+
   <title>Mengting Ai - Experience</title>
 
   <script>
    function toggleMenu() {
       var menu = document.getElementById('popup-menu');
-      if (menu.style.visibility === "hidden") {
-        // console.log('a')
-        menu.style.visibility = "visible";
-      } else {
+      // A slightly better check for visibility
+      if (menu.style.visibility === "visible") {
         menu.style.visibility = "hidden";
+      } else {
+        menu.style.visibility = "visible";
       }
     }
-
   </script>
 </head>
 
@@ -60,7 +210,6 @@
     <div class="site-container">
       <div class="site-content e2e-site-content">
         
-
         <header class="myhead"
           data-hover-hint-placement="top-start">
           <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
@@ -76,11 +225,9 @@
             data-hover-hint-placement="bottom-start">
             <div class="logo e2e-site-logo-text logo-text  ">
               <a href="" class="preserve-whitespace">Mengting Ai</a>
-
+              <a href="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/CV_Mengting_Ai.pdf" style="text-decoration: underline; margin-left: 8px;">[CV]</a>
             </div>
           </div>
-          </div>
-
           
           <div class="hamburger-click-area js-hamburger" onclick="toggleMenu()">
             <div class="hamburger">
@@ -90,101 +237,81 @@
             </div>
           </div>
 
-          <div id="popup-menu" class="popup-menu" style="z-index: 1000;position: relative;">
+          <div id="popup-menu" class="popup-menu" style="z-index: 1000; visibility: hidden;">
             <ul>
               <li><a href="/mengtingai/home">Home</a></li>
               <li><a href="/mengtingai/experience">Experience</a></li>
               <li><a href="/mengtingai/hobby">Hobby</a></li>
             </ul>
           </div>
+        </header>
 
-      </div>
-      </header>
-
-        <main >
-          <h2 style="padding-top:0.5%;z-index: 0;padding-left: 5%;padding-bottom: 1%;">
-            <!-- &nbsp;&nbsp;&nbsp; -->
-            PUBLICATIONS
-          </h2>
+        <main>
+          <h2>PUBLICATIONS</h2>
           
           <div class="publication-module">
-            <h3>ResMoE: Space-efficient MoE Module Approximation via Wasserstein Barycenter
-            and Residual Restoration [KDD 2025]</h3>
-            <p class="no-break"><b>Mengting Ai*</b>, Tianxin Wei*, Yifan Chen*, Zhichen Zeng, Ritchie Zhao, Girish Varatkar,
-            Bita Darvish Rouhani, Xianfeng Tang, Hanghang Tong, Jingrui He</p>
+            <h3>ResMoE: Space-efficient MoE Module Approximation via Wasserstein Barycenter and Residual Restoration [KDD 2025]</h3>
+            <p class="no-break"><b>Mengting Ai*</b>, Tianxin Wei*, Yifan Chen*, Zhichen Zeng, Ritchie Zhao, Girish Varatkar, Bita Darvish Rouhani, Xianfeng Tang, Hanghang Tong, Jingrui He</p>
           </div>
 
           <div class="publication-module">
             <h3>APEX2: Adaptive and Extreme Summarization for Personalized Knowledge Graphs [KDD 2025]</h3>
             <p class="no-break">Zihao Li, Dongqi Fu, <b>Mengting Ai</b>, Jingrui He</p>
           </div>
-          
-          
-                    <h2 style="padding-top:3%;z-index: 0;padding-left: 5%;">
-                      <!-- &nbsp;&nbsp;&nbsp; -->
-                      WORK EXPERIENCE
-                    </h2>
 
-
-                    <div class="project-module">
-                      <div class="project-content">
-                        <h2>Prairie Research Institute (UIUC)</h2>
-                        <p class="date">June 2023 – August 2024</p>
-                        <p class="role">Software Development Intern</p>
-                        <p>Engineered a full-stack website leveraging JavaScript, Leaflet, and Python.</p>
-                      </div>
-                    </div>
-
-
-                    <div class="project-module">
-                      <div class="project-content">
-                        <h2>TE Connectivity</h2>
-                        <p class="date">June 2022 – March 2023</p>
-                        <p class="role">Digital Intern</p>
-                        <p>Developed high-quality backend APIs involving SQL, Docker, RESTful, MongoDB, and AWS.</p>
-                      </div>
-                    </div>
-
-                    <div class="project-module">
-                      <div class="project-content">
-                        <h2>Institute of Software Chinese Academy of Sciences</h2>
-                        <p class="date">October 2021 – January 2022</p>
-                        <p class="role">NLP Algorithm Intern</p>
-                        <p>Engineered a Q&A system using BERT.</p>
-                      </div>
-                    </div>
-
-                    <div class="project-module">
-                      <div class="project-content">
-                        <h2>Baidu</h2>
-                        <p class="date">February 2021 – August 2021</p>
-                        <p class="role">Data Scientist Intern</p>
-                        <p>Used TF-IDF, n-gram, word2vec, XGBoost, and PySpark to implement text-classification and
-                          keyword-recognition.</p>
-                      </div>
-                    </div>
-
-
-
-
-
-
-                  </div>
-                </div>
-              </div>
-            </section>
+          <div class="publication-module">
+            <h3>PyG-SSL: A Graph Self-Supervised Learning Toolkit [CIKM 2025]</h3>
+            <p class="no-break">Lecheng Zheng, Baoyu Jing, Zihao Li, Zhichen Zeng, Tianxin Wei, <b>Mengting Ai</b>, Xinrui He, Lihui Liu, Dongqi Fu, Jiaxuan You, Hanghang Tong, Jingrui He
+            </p>
           </div>
-          <footer class="site-footer" data-hover-hint="footer">
-            <div class="footer-text">
 
+          <h2>WORK EXPERIENCE</h2>
+
+          <div class="project-module">
+            <div class="project-content">
+              <h2>Prairie Research Institute (UIUC)</h2>
+              <p class="date">June 2023 – August 2024</p>
+              <p class="role">Software Development Intern</p>
+              <p>Engineered a full-stack website leveraging JavaScript, Leaflet, and Python.</p>
             </div>
-          </footer>
+          </div>
+
+          <div class="project-module">
+            <div class="project-content">
+              <h2>TE Connectivity</h2>
+              <p class="date">June 2022 – March 2023</p>
+              <p class="role">Digital Intern</p>
+              <p>Developed high-quality backend APIs involving SQL, Docker, RESTful, MongoDB, and AWS.</p>
+            </div>
+          </div>
+
+          <div class="project-module">
+            <div class="project-content">
+              <h2>Institute of Software Chinese Academy of Sciences</h2>
+              <p class="date">October 2021 – January 2022</p>
+              <p class="role">NLP Algorithm Intern</p>
+              <p>Engineered a Q&A system using BERT.</p>
+            </div>
+          </div>
+
+          <div class="project-module">
+            <div class="project-content">
+              <h2>Baidu</h2>
+              <p class="date">February 2021 – August 2021</p>
+              <p class="role">Data Scientist Intern</p>
+              <p>Used TF-IDF, n-gram, word2vec, XGBoost, and PySpark to implement text-classification and keyword-recognition.</p>
+            </div>
+          </div>
+
         </main>
-
-
       </div>
     </div>
   </div>
+  <footer class="site-footer" data-hover-hint="footer">
+    <div class="footer-text">
+    </div>
+  </footer>
+  
   <script
     type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "e7fb1b89a0", "applicationID": "750147145", "transactionName": "ZwZaYkJVDERXUxULCV5Me0NDQA1aGWsmJzJtQxdtS0QDQ14KT0gbbQ==", "queueTime": 0, "applicationTime": 47, "atts": "S0FNFApPHxsUUUNYHU0e", "errorBeacon": "bam.nr-data.net", "agent": "" }</script>
 </body>

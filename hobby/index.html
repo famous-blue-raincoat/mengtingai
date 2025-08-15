@@ -35,6 +35,178 @@
     min-height: 700px; /* Prevent collapsing */
     /* object-fit: cover; */
   }
+
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .site-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* --- Header and Navigation --- */
+  .myhead {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e9ecef;
+      position: relative; /* Added for positioning context for the popup menu */
+  }
+  
+  .nav-container a {
+      transition: color 0.3s ease;
+  }
+  
+  .nav-container a:hover,
+  .nav-container a.active {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+  }
+
+  /* --- Homepage Specific Content Styling --- */
+  main {
+    padding-top: 2rem;
+  }
+
+  .page-header.content {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: flex-start; /* Changed to align items to the start (left) */
+    gap: 2rem; /* Space between image and text */
+  }
+
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+  
+  .description a {
+      color: #0056b3;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  
+  .description a:hover {
+      text-decoration: underline;
+  }
+
+  .iframe-container {
+    text-align: center; /* Centers the iframe */
+    margin: 2rem 0;
+  }
+
+  /* Social Icons Styling */
+  .module-content-social_icons .social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .module-content-social_icons .social svg.icon {
+      width: 28px;
+      height: 28px;
+      fill: #333;
+      transition: fill 0.3s ease, transform 0.3s ease;
+  }
+  
+  .module-content-social_icons .social a:hover svg.icon {
+      fill: #007bff;
+      transform: scale(1.1);
+  }
+
+  /* --- Mobile Menu Styles --- */
+  .hamburger-click-area {
+    display: none; /* Hidden by default on desktop */
+    cursor: pointer;
+  }
+
+  .popup-menu {
+    position: absolute; /* Changed to absolute positioning */
+    top: 100%; /* Position it right below the header */
+    right: 0;
+    background-color: white;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 0.5rem 0;
+  }
+  
+  .popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .popup-menu li a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .popup-menu li a:hover {
+    background-color: #f8f9fa;
+  }
+
+  /* --- Responsive Design --- */
+  @media (max-width: 768px) {
+    .site-content {
+      padding: 1rem;
+    }
+    
+    /* Show hamburger and hide desktop nav on mobile */
+    .myhead .nav-container {
+      display: none;
+    }
+    .hamburger-click-area {
+      display: block;
+    }
+
+    /* Stack profile image and text on mobile */
+    .header-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  }
+
+  .masthead-text {
+    background-color: transparent !important;
+    padding: 0 !important; 
+  }
+
+  .masthead {
+    background: none !important;
+    border: none !important;    
+    box-shadow: none !important; 
+}
 </style>
 
 
@@ -45,6 +217,7 @@
 <body class="transition-enabled">
   <div class='page-background-video page-background-video-with-panel'>
   </div>
+
   <div class="js-responsive-nav">
     <div class="responsive-nav has-social">
       <div class="responsive-nav__contents">
@@ -71,51 +244,47 @@
   <div class="site-wrap cfix">
     <div class="site-container">
       <div class="site-content e2e-site-content">
-        <header class="myhead"
-          data-hover-hint-placement="top-start">
-          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
-            <div class="page-title">
-              <a href="/mengtingai/home" >About</a>
-            </div>
-            <div class="page-title">
-              <a href="/mengtingai/experience">Experience</a>
-            </div>
-            <div class="gallery-title"><a href="/mengtingai/hobby"  class="active">Hobby</a></div>
-          </nav>
-          <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo"
-            data-hover-hint-placement="bottom-start">
-            <div class="logo e2e-site-logo-text logo-text  ">
-              <a href="" class="preserve-whitespace">Mengting Ai</a>
 
-            </div>
+      <header class="myhead" data-hover-hint-placement="top-start">
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+          <div class="page-title">
+            <a href="/mengtingai/home">About</a>
           </div>
+          <div class="page-title">
+            <a href="/mengtingai/experience">Experience</a>
           </div>
+          <div class="gallery-title">
+            <a href="/mengtingai/hobby" class="active">Hobby</a>
+          </div>
+        </nav>
+        
+        <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo" data-hover-hint-placement="bottom-start">
+          <div class="logo e2e-site-logo-text logo-text">
+            <a href="" class="preserve-whitespace">Mengting Ai</a>
+          </div>
+        </div>
+        
+        <div class="hamburger-click-area js-hamburger" onclick="toggleMenu()">
+          <div class="hamburger">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
 
-          
-          <div class="hamburger-click-area js-hamburger" onclick="toggleMenu()">
-            <div class="hamburger">
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
-          </div>
-
-          <div id="popup-menu" class="popup-menu" style="z-index: 1000;position: relative;">
-            <ul>
-              <li><a href="/mengtingai/home">Home</a></li>
-              <li><a href="/mengtingai/experience">Experience</a></li>
-              <li><a href="/mengtingai/hobby">Hobby</a></li>
-            </ul>
-          </div>
-
-      </div>
+        <div id="popup-menu" class="popup-menu" style="z-index: 1000; visibility: hidden;">
+          <ul>
+            <li><a href="/mengtingai/home">Home</a></li>
+            <li><a href="/mengtingai/experience">Experience</a></li>
+            <li><a href="/mengtingai/hobby">Hobby</a></li>
+          </ul>
+        </div>
       </header>
 
-
-
+        <br>
 
         <div class="masthead" data-context="page.masthead" data-hover-hint="mastheadOptions"
-          data-hover-hint-placement="top-start" style="position:relative;padding-top:0%;z-index: 10;">
+          data-hover-hint-placement="top-start" style="position:relative;padding-top:0%;z-index: 20;">
           <div class="masthead-contents" >
             <div class="masthead-text js-masthead-text">
 
@@ -123,8 +292,19 @@
                 <p decorator="inlineTextEditable" contenteditable="false"
                   class="js-inline-text-editable preserve-whitespace main-text rich-text module-text"
                   data-text-keypath="page.masthead.text.text" value="When away from the computer, I enjoy photography.">
-                  When away from the computer, I enjoy photography (and music! Please DM me if you love music as well.)</p>
+                  When away from the computer, I enjoy photography and video games (and music! Please DM me if you love music as well.)</p>
               </div>
+
+              
+
+              <!-- <div class="steam-widget-container">
+                <iframe 
+                  src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561198825371924" 
+                  scrolling="no"
+                  height="300"
+                  allowfullscreen>
+                </iframe>
+              </div> -->
 
               <br>
               <br>
