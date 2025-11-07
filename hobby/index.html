@@ -26,13 +26,12 @@
 
   </script>
 
-<link rel="stylesheet" href="mycss.css">
-
+  
 <style>
   .custom-cover {
-    max-width: 550px; 
+    max-width: 600px; 
     height: auto !important;
-    min-height: 700px; /* Prevent collapsing */
+    min-height: 550px; /* Prevent collapsing */
     /* object-fit: cover; */
   }
 
@@ -207,6 +206,92 @@
     border: none !important;    
     box-shadow: none !important; 
 }
+
+/* --- Content Section Headers (for Hobby page) --- */
+  main h2,
+  .masthead-text h2 {
+    font-size: 2rem;
+    color: #343a40;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 1rem;
+    text-align: left; /* 确保标题是左对齐的 */
+  }
+
+  /* --- Painting Gallery Row --- */
+  /* --- 油画作品集样式 --- */
+  .paintings-gallery {
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-wrap: wrap; /* 允许项目换行 */
+    justify-content: center; /* 水平居中所有项目 */
+    gap: 2rem; /* 项目之间的间距 */
+    margin-bottom: 3rem; /* 画廊底部与下一个内容的间距 */
+  }
+
+  .painting-gallery-item {
+    display: flex; /* 关键：使卡片内部也成为 Flex 容器 */
+    flex-direction: column; /* 关键：图片和标题垂直堆叠 */
+    justify-content: space-between; /* 关键：图片和标题内容之间留出空间 */
+    align-items: center; /* 关键：使图片和标题在各自的卡片内水平居中 */
+
+    width: 45%; /* 每张图片宽度大约是父容器的 45%，留出间隙 */
+    max-width: 400px; /* 限制单张图片的最大宽度，避免过大 */
+    
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* 确保图片圆角 */
+    
+    /* min-height 保证卡片有最小高度，可以根据你图片的高度调整 */
+    min-height: 350px; /* 调整此值以适应你的图片和标题总高度 */ 
+  }
+
+  .painting-gallery-item:hover {
+      transform: translateY(-5px); /* 鼠标悬停时轻微上浮 */
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+
+  .painting-gallery-item img {
+    width: 100%;
+    /* height: auto; */ /* 这行可以删掉，或保留 */
+    flex-shrink: 0; /* 确保图片不会缩小以适应容器 */
+    display: block;
+    object-fit: contain; /* 关键：图片完整显示在容器内，不裁剪 */
+    padding: 0.2rem; /* 给图片一些内边距，不紧贴边缘 */
+    max-height: 250px; /* 限制图片的最大高度，防止过高 */
+    width: auto; /* 让图片宽度根据其自身比例调整，并居中 */
+  }
+
+  .painting-gallery-item .painting-title {
+    font-size: 1.15rem; /* 标题字体大小 */
+    font-weight: bold;
+    color: #343a40;
+    padding: 1rem 1.5rem; /* 标题内边距 */
+    margin: 0;
+    text-align: center; /* 确保标题文字居中 */
+    flex-grow: 1; /* 标题部分可以根据内容稍微增长，但保持居中 */
+    display: flex; /* 让标题内容本身也成为flex容器 */
+    align-items: center; /* 垂直居中标题文字 */
+    justify-content: center; /* 水平居中标题文字 */
+  }
+
+  /* --- 响应式调整 --- */
+  @media (max-width: 768px) {
+    .paintings-gallery {
+      flex-direction: column; /* 手机上垂直堆叠 */
+      align-items: center; /* 垂直堆叠时居中 */
+    }
+    .painting-gallery-item {
+      width: 90%; /* 手机上宽度变大 */
+      max-width: none; /* 取消最大宽度限制 */
+      min-height: auto; /* 手机上高度自动适应 */
+    }
+    .painting-gallery-item img {
+      max-height: 300px; /* 手机上图片可以高一点 */
+    }
+  }
 </style>
 
 
@@ -289,49 +374,191 @@
           <div class="masthead-contents" >
             <div class="masthead-text js-masthead-text">
 
-              <div data-context="page.masthead" data-hover-hint="mastheadText">
-                <p decorator="inlineTextEditable" contenteditable="false"
-                  class="js-inline-text-editable preserve-whitespace main-text rich-text module-text"
-                  data-text-keypath="page.masthead.text.text" value="When away from the computer, I enjoy photography.">
-                  When away from the computer, I enjoy photography, video games and music, my favs are Faye Wong, Shiina Ringo and Celine Dion.</p>
-
+              <div data-context="page.masthead" data-hover-hint="mastheadText" style="max-width: 800px; margin: 20px auto; text-align: center;">
+              <p decorator="inlineTextEditable" contenteditable="false"
+              class="js-inline-text-editable preserve-whitespace main-text rich-text module-text">When away from the computer, I enjoy photography, video games and music.<br> My favs are Faye Wong 王菲, Sheena Ringo 椎名林檎 and Céline Dion.<br> I played the guitar/lead vocal/drumset in bands during college. I also play a little bit of piano.</p>
               </div>
 
-                <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.08); overflow: hidden; text-align: center;">
+
+              <div style="max-width: 600px; margin: 40px auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.08); overflow: hidden; text-align: center;">
 
                 <img src="IMG_5870.JPG" alt="Mengting with a motorcycle" style="width: 100%; height: auto; display: block;">
 
                 <p decorator="inlineTextEditable" contenteditable="false"
                   class="js-inline-text-editable preserve-whitespace main-text rich-text module-text"
-                  style="padding: 15px 25px 25px 25px; margin: 0; font-size: 1.1rem; line-height: 1.6; color: #333;">
-                  I just picked up motorcycle riding! Come and join me for a ride!
-                </p>
+                  style="padding: 15px 25px 25px 25px; margin: 0; font-size: 1.1rem; line-height: 1.6; color: #333; text-align: center !important;">I just picked up motorcycle riding! Come and join me for a ride!</p>
 
               </div>
 
-              <!-- <div class="steam-widget-container">
-                <iframe 
+              <iframe 
                   src="https://gamer2810.github.io/steam-miniprofile/?accountId=76561198825371924" 
                   scrolling="no"
-                  height="300"
+                  height="260"
+                  width="400"
+                  style="display: block; margin: 40px auto; border: none; border-radius: 12px;"
                   allowfullscreen>
-                </iframe>
-              </div> -->
-
-              <br>
-              <br>
+              </iframe>
 
               <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/36OKHiM8qm3DTMF15G8ixf?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-
-              <div class="masthead-buttons">
-
-              </div>
             </div>
           </div>
         </div>
         <main>
+          <section class="oil-painting-section">
+              <h2>OIL PAINTING</h2>
+              <p class="section-subtitle">A collection of my recent pieces.</p>
+              
+              <div class="paintings-gallery">
+                <a class="painting-gallery-item"> <img src="./IMG_3511 2.jpg" alt="Oil painting 1: Wheatfield with Crows">
+                  <p class="painting-title">Korenveld met kraaien</p>
+                </a>
+                
+                <a class="painting-gallery-item">
+                  <img src="./IMG_3312 2.jpg" alt="Oil painting 2: 凱風快晴">
+                  <p class="painting-title">凱風快晴</p>
+                </a>
+
+                </div>
+            </section>
+
           <section class="project-covers js-site-wrap" data-context="page.gallery.covers">
+            <h2>Photography</h2>
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/DSC_0647.jpg" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Ito</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+            
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/DSC_0931.jpg" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Kyoto</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/DSC_0567.jpg" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Nachi</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/IMG_6487.JPG" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Québec</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/DSC_0815-Enhanced-NR-3.jpeg" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Toronto</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            
+
+             
+
+
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/DSC_0064.jpg" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Niigata</div>
+                  </div>
+                </div>
+              </div>
+            </a>
 
             <a class="project-cover js-project-cover-touch hold-space ">
               <div class="cover-image-wrap custom-cover">
@@ -354,6 +581,25 @@
             </a>
 
 
+            <a class="project-cover js-project-cover-touch hold-space ">
+              <div class="cover-image-wrap custom-cover">
+                <div class="cover-image custom-cover">
+                  <div class="cover cover-normal">
+
+                    <img class="cover__img js-lazy"
+                      src="https://raw.githubusercontent.com/famous-blue-raincoat/pic/main/compressed/DSC_0819.jpg" />
+
+                  </div>
+                </div>
+              </div>
+              <div class="details-wrap ">
+                <div class="details ">
+                  <div class="details-inner ">
+                    <div class="title preserve-whitespace ">Hong Kong</div>
+                  </div>
+                </div>
+              </div>
+            </a>
 
 
 
@@ -556,7 +802,7 @@
             </a>
 
 
-
+<!-- 
 
             <a class="project-cover js-project-cover-touch hold-space">
               <div class="cover-image-wrap custom-cover">
@@ -575,7 +821,7 @@
                   </div>
                 </div>
               </div>
-            </a>
+            </a> -->
 
 
             <a class="project-cover js-project-cover-touch hold-space" data-context="pages"

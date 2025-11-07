@@ -163,6 +163,41 @@
         display: block;
       }
     }
+
+          /* --- News Section Styling --- */
+      .news-section ul {
+        list-style-type: none; /* 移除默认的黑点 */
+        padding-left: 0;      /* 移除默认的左侧内边距 */
+        margin-top: 0;
+      }
+
+      .news-section li {
+        font-size: 1rem;
+        color: #495057;
+        padding: 0.75rem 0;     /* 上下加一点间距 */
+        border-bottom: 1px solid #e9ecef; /* 用一个细线分隔，保持简洁 */
+      }
+      
+      /* 最后一个不需要分隔线 */
+      .news-section li:last-child {
+        border-bottom: none;
+      }
+
+      /* 让日期和文本分开。
+        使用 flex 布局可以保证日期和后面的文本无论多长都能很好地对齐
+      */
+      .news-item {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+      }
+
+      .news-date {
+        font-weight: 600;     /* 加粗日期 */
+        color: #343a40;
+        min-width: 100px;     /* 固定宽度，让所有日期左侧对齐 */
+        margin-right: 1.5em;  /* 日期和文本之间的间距 */
+      }
   </style>
 
   <title>Mengting Ai - Experience</title>
@@ -247,6 +282,44 @@
         </header>
 
         <main>
+
+          <h2>NEWS</h2>
+          <div class="news-section">
+            <ul>
+              <li>
+                <div class="news-item">
+                  <span class="news-date">[Nov 2025]</span>
+                  <span class="news-description">
+                    Excited to give an invited talk at <a href="https://researchtrend.ai/">Researchtrend.AI</a> about our LLM Structured Pruning paper.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="news-item">
+                  <span class="news-date">[Oct 2025]</span>
+                  <span class="news-description">
+                    I'll be joining Capital One as an Applied Researcher Intern for Summer 2026! See you in NYC!
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="news-item">
+                  <span class="news-date">[Sep 2025]</span>
+                  <span class="news-description">
+                    Will be serving as a Reviewer for ICLR 2026.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="news-item">
+                  <span class="news-date">[Aug 2025]</span>
+                  <span class="news-description">
+                    I'll be presenting our MoE compression work at KDD 2025. See you in Toronto!
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
           <h2>PUBLICATIONS</h2>
           
           <div class="publication-module">
@@ -302,6 +375,7 @@
               <p>Used TF-IDF, n-gram, word2vec, XGBoost, and PySpark to implement text-classification and keyword-recognition.</p>
             </div>
           </div>
+
 
         </main>
       </div>
