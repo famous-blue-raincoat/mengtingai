@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Mengting Ai - Projects" />
+  <meta property="og:description" content="Selected research projects by Mengting Ai." />
+  <link rel="icon"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAADUExURUxpcU3H2DoAAAABdFJOUwBA5thmAAAADElEQVQI12NgIA0AAAAwAAHHqoWOAAAAAElFTSuQmCC" />
+  <link rel="stylesheet"
+    href="https://cdn.myportfolio.com/5453d8bc-a637-4b00-bbc5-1673e83b72a9/80915a3364e68b3f048b38af2caef5a21686121172.css?h=4e9d0a365716d735d5fd37204e1b8873"
+    type="text/css" />
+  <title>Mengting Ai - Projects</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .site-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .myhead {
+      position: relative;
+      padding: 1rem 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .nav-container a {
+      transition: color 0.3s ease;
+    }
+
+    .myhead > .nav-container {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      width: 360px;
+      white-space: nowrap;
+    }
+
+    .nav-container a:hover,
+    .nav-container a.active {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+
+    main {
+      padding-top: 2rem;
+    }
+
+    .projects-heading {
+      margin-bottom: 2rem;
+    }
+
+    .projects-heading h1 {
+      margin: 0 0 0.4rem;
+      color: #343a40;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .projects-heading p {
+      margin: 0;
+      color: #6c757d;
+      font-size: 1rem;
+    }
+
+    .project-card {
+      background-color: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      color: #6c757d;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .project-meta span + span::before {
+      content: "·";
+      margin-right: 0.6rem;
+    }
+
+    .project-card h2 {
+      margin: 0 0 0.3rem;
+      color: #212529;
+      font-size: 1.5rem;
+    }
+
+    .project-title {
+      margin: 0 0 0.8rem;
+      color: #495057;
+      font-size: 1.05rem;
+    }
+
+    .project-authors {
+      margin: 0;
+      color: #6c757d;
+      font-size: 0.95rem;
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-links a {
+      color: #0056b3;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    .project-page-status {
+      color: #868e96;
+      font-size: 0.85rem;
+    }
+
+    .hamburger-click-area {
+      display: none;
+      cursor: pointer;
+    }
+
+    .popup-menu {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 1000;
+      visibility: hidden;
+      width: 200px;
+      padding: 0.5rem 0;
+      background-color: white;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .popup-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .popup-menu li a {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .popup-menu li a:hover {
+      background-color: #f8f9fa;
+    }
+
+    @media (max-width: 768px) {
+      .site-content {
+        padding: 1rem;
+      }
+
+      .myhead .nav-container {
+        display: none;
+      }
+
+      .hamburger-click-area {
+        display: block;
+      }
+
+      .projects-heading h1 {
+        font-size: 1.6rem;
+      }
+
+      .project-card {
+        padding: 1.4rem;
+      }
+
+      .project-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById('popup-menu');
+      menu.style.visibility = menu.style.visibility === 'visible' ? 'hidden' : 'visible';
+    }
+  </script>
+</head>
+
+<body class="transition-enabled">
+  <div class="js-responsive-nav">
+    <div class="responsive-nav has-social">
+      <div class="responsive-nav__contents">
+        <div class="close-responsive-click-area js-close-responsive-nav">
+          <div class="close-responsive-button"></div>
+        </div>
+        <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+          <div class="page-title"><a href="/mengtingai/home">About</a></div>
+          <div class="page-title"><a href="/mengtingai/experience">Experience</a></div>
+          <div class="page-title"><a href="/mengtingai/projects" class="active">Projects</a></div>
+          <div class="gallery-title"><a href="/mengtingai/hobby">Hobby</a></div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-wrap cfix">
+    <div class="site-container">
+      <div class="site-content e2e-site-content">
+        <header class="myhead" data-hover-hint-placement="top-start">
+          <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
+            <div class="page-title"><a href="/mengtingai/home">About</a></div>
+            <div class="page-title"><a href="/mengtingai/experience">Experience</a></div>
+            <div class="page-title"><a href="/mengtingai/projects" class="active">Projects</a></div>
+            <div class="gallery-title"><a href="/mengtingai/hobby">Hobby</a></div>
+          </nav>
+
+          <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo"
+            data-hover-hint-placement="bottom-start">
+            <div class="logo e2e-site-logo-text logo-text">
+              <a href="/mengtingai/home" class="preserve-whitespace">Mengting Ai</a>
+              <a href="/mengtingai/files/Mengting_Ai_CV.pdf" target="_blank" rel="noopener"
+                style="text-decoration: underline; margin-left: 8px;">[CV]</a>
+            </div>
+          </div>
+
+          <div class="hamburger-click-area js-hamburger" onclick="toggleMenu()">
+            <div class="hamburger">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+
+          <div id="popup-menu" class="popup-menu">
+            <ul>
+              <li><a href="/mengtingai/home">Home</a></li>
+              <li><a href="/mengtingai/experience">Experience</a></li>
+              <li><a href="/mengtingai/projects">Projects</a></li>
+              <li><a href="/mengtingai/hobby">Hobby</a></li>
+            </ul>
+          </div>
+        </header>
+
+        <main>
+          <header class="projects-heading">
+            <h1>Projects</h1>
+            <p>Selected research projects.</p>
+          </header>
+
+          <section aria-label="Research projects">
+            <article class="project-card">
+              <div class="project-meta">
+                <span>COLM 2026</span>
+                <span>LLM Compression</span>
+              </div>
+              <h2>NIRVANA</h2>
+              <p class="project-title">Structured Pruning Reimagined for Large Language Model Compression</p>
+              <p class="project-authors"><strong>Mengting Ai</strong>, Tianxin Wei, Sirui Chen, Jingrui He</p>
+              <footer class="project-footer">
+                <div class="project-links">
+                  <a href="https://arxiv.org/abs/2509.14230" target="_blank" rel="noopener">Paper</a>
+                  <a href="https://github.com/iDEA-iSAIL-Lab-UIUC/NIRVANA" target="_blank" rel="noopener">Code</a>
+                </div>
+                <span class="project-page-status">Project page coming soon</span>
+              </footer>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -21,7 +21,7 @@
     }
 
     .site-content {
-      max-width: 1100px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 2rem;
     }
@@ -35,6 +35,14 @@
     
     .nav-container a {
         transition: color 0.3s ease;
+    }
+
+    .myhead > .nav-container {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      width: 360px;
+      white-space: nowrap;
     }
     
     .nav-container a:hover,
@@ -91,90 +99,6 @@
     .iframe-container {
       text-align: center; /* Centers the iframe */
       margin: 2rem 0;
-    }
-
-    .home-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    .project-sidebar {
-      position: sticky;
-      top: 2rem;
-      background: #ffffff;
-      border: 1px solid #e9ecef;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-
-    .project-sidebar h2 {
-      margin: 0 0 1.25rem;
-      color: #343a40;
-      font-size: 1.25rem;
-    }
-
-    .project-status {
-      display: inline-block;
-      margin-bottom: 0.75rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 999px;
-      background: #eaf3ff;
-      color: #0056b3;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-
-    .project-sidebar h3 {
-      margin: 0 0 0.35rem;
-      color: #212529;
-      font-size: 1.15rem;
-    }
-
-    .project-subtitle {
-      margin: 0 0 0.85rem;
-      color: #495057;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-
-    .project-authors {
-      margin: 0;
-      color: #6c757d;
-      font-size: 0.82rem;
-      line-height: 1.5;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-
-    .project-links a {
-      color: #0056b3;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-
-    .project-note {
-      margin: 1rem 0 0;
-      padding-top: 1rem;
-      border-top: 1px solid #e9ecef;
-      color: #6c757d;
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 960px) {
     }
 
     /* Social Icons Styling */
@@ -256,13 +180,6 @@
         gap: 1.5rem;
       }
 
-      .home-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .project-sidebar {
-        position: static;
-      }
     }
   </style>
     
@@ -294,7 +211,7 @@
           <div class="page-title">
             <a href="/mengtingai/experience">Experience</a>
           </div>
-          <div class="page-title"><a href="/mengtingai/home/#projects">Projects</a></div>
+          <div class="page-title"><a href="/mengtingai/projects">Projects</a></div>
           <div class="gallery-title"><a href="/mengtingai/hobby">Hobby</a></div>
         </nav>
         <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons"
@@ -317,7 +234,7 @@
               <a href="/mengtingai/experience">Experience</a>
             </div>
             <div class="page-title">
-              <a href="/mengtingai/home/#projects">Projects</a>
+              <a href="/mengtingai/projects">Projects</a>
             </div>
             <div class="gallery-title"><a href="/mengtingai/hobby">Hobby</a></div>
           </nav>
@@ -341,14 +258,13 @@
             <ul>
               <li><a href="/mengtingai/home">Home</a></li>
               <li><a href="/mengtingai/experience">Experience</a></li>
-              <li><a href="/mengtingai/home/#projects">Projects</a></li>
+              <li><a href="/mengtingai/projects">Projects</a></li>
               <li><a href="/mengtingai/hobby">Hobby</a></li>
             </ul>
           </div>
         </header>
       
-        <main class="home-layout">
-          <div class="home-primary">
+        <main>
             <div class="page-header content" data-context="pages" data-hover-hint="pageHeader">
               <div class="header-content">
                 <img src="./img.jpeg" alt="Profile Picture" class="profile-image">
@@ -428,22 +344,6 @@
               </div>
             </div>
             </div>
-          </div>
-
-          <aside id="projects" class="project-sidebar" aria-labelledby="projects-heading">
-            <h2 id="projects-heading">Featured Projects</h2>
-            <article>
-              <span class="project-status">COLM 2026</span>
-              <h3>NIRVANA</h3>
-              <p class="project-subtitle">Structured Pruning Reimagined for Large Language Model Compression</p>
-              <p class="project-authors"><strong>Mengting Ai</strong>, Tianxin Wei, Sirui Chen, Jingrui He</p>
-              <div class="project-links">
-                <a href="https://arxiv.org/abs/2509.14230" target="_blank" rel="noopener">Paper</a>
-                <a href="https://github.com/iDEA-iSAIL-Lab-UIUC/NIRVANA" target="_blank" rel="noopener">Code</a>
-              </div>
-              <p class="project-note">Dedicated project page coming soon.</p>
-            </article>
-          </aside>
         </main>
 
         <footer class="site-footer" data-hover-hint="footer">
