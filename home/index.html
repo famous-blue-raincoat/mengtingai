@@ -21,7 +21,7 @@
     }
 
     .site-content {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 2rem;
     }
@@ -91,6 +91,90 @@
     .iframe-container {
       text-align: center; /* Centers the iframe */
       margin: 2rem 0;
+    }
+
+    .home-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 280px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .project-sidebar {
+      position: sticky;
+      top: 2rem;
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-sidebar h2 {
+      margin: 0 0 1.25rem;
+      color: #343a40;
+      font-size: 1.25rem;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: #eaf3ff;
+      color: #0056b3;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .project-sidebar h3 {
+      margin: 0 0 0.35rem;
+      color: #212529;
+      font-size: 1.15rem;
+    }
+
+    .project-subtitle {
+      margin: 0 0 0.85rem;
+      color: #495057;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .project-authors {
+      margin: 0;
+      color: #6c757d;
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .project-links a {
+      color: #0056b3;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    .project-note {
+      margin: 1rem 0 0;
+      padding-top: 1rem;
+      border-top: 1px solid #e9ecef;
+      color: #6c757d;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 960px) {
     }
 
     /* Social Icons Styling */
@@ -171,6 +255,14 @@
         text-align: center;
         gap: 1.5rem;
       }
+
+      .home-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .project-sidebar {
+        position: static;
+      }
     }
   </style>
     
@@ -197,12 +289,13 @@
         </div>
         <nav class="nav-container" data-hover-hint="nav" data-hover-hint-placement="bottom-start">
           <div class="page-title">
-            <a href="/about" class="active">About</a>
+            <a href="/mengtingai/home" class="active">About</a>
           </div>
           <div class="page-title">
-            <a href="/contact">Experience</a>
+            <a href="/mengtingai/experience">Experience</a>
           </div>
-          <div class="gallery-title"><a href="/hobby">Hobby</a></div>
+          <div class="page-title"><a href="/mengtingai/home/#projects">Projects</a></div>
+          <div class="gallery-title"><a href="/mengtingai/hobby">Hobby</a></div>
         </nav>
         <div class="social pf-nav-social" data-context="theme.nav" data-hover-hint="navSocialIcons"
           data-hover-hint-placement="bottom-start">
@@ -223,13 +316,16 @@
             <div class="page-title">
               <a href="/mengtingai/experience">Experience</a>
             </div>
+            <div class="page-title">
+              <a href="/mengtingai/home/#projects">Projects</a>
+            </div>
             <div class="gallery-title"><a href="/mengtingai/hobby">Hobby</a></div>
           </nav>
           <div class="logo-wrap" data-context="theme.logo.header" data-hover-hint="logo"
             data-hover-hint-placement="bottom-start">
             <div class="logo e2e-site-logo-text logo-text">
               <a href="" class="preserve-whitespace">Mengting Ai</a>
-              <a href="https://drive.google.com/file/d/1zYYcYdpLEHLNqjWYfTaC0BL825LAOWNQ/view?usp=sharing" style="text-decoration: underline; margin-left: 8px;">[CV]</a>
+              <a href="/mengtingai/files/Mengting_Ai_CV.pdf" target="_blank" rel="noopener" style="text-decoration: underline; margin-left: 8px;">[CV]</a>
             </div>
           </div>
           
@@ -245,27 +341,29 @@
             <ul>
               <li><a href="/mengtingai/home">Home</a></li>
               <li><a href="/mengtingai/experience">Experience</a></li>
+              <li><a href="/mengtingai/home/#projects">Projects</a></li>
               <li><a href="/mengtingai/hobby">Hobby</a></li>
             </ul>
           </div>
         </header>
       
-        <main>
-          <div class="page-header content" data-context="pages" data-hover-hint="pageHeader">
-            <div class="header-content">
-              <img src="./img.jpeg" alt="Profile Picture" class="profile-image">
-              <p class="description">
-                Greetings, my name is Mengting Ai. I am a second-year PhD Student of Information Sciences @ UIUC, advised by the fabulous <a href="https://www.hejingrui.org/">Prof. Jingrui He</a>. I also worked closely with <a href="http://tonghanghang.org/">Prof. Hanghang Tong</a>, <a href="https://ischool.illinois.edu/people/madelyn-rose-sanfilippo"> Prof. Madelyn Rose Sanfilippo</a>, and <a href="https://yueguo-50.github.io/">Prof. Yue Guo</a>.
-                My research focuses on Efficient ML (specifically on LLM compression), AI Ethics, AI4Science, and LLM Safety.
-              </p>
-            </div> 
-          </div>
-          
-          <div class="iframe-container">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5VWC7v2dC2K0SIIjT9WTLN?utm_source=generator" width="80%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-          </div>
+        <main class="home-layout">
+          <div class="home-primary">
+            <div class="page-header content" data-context="pages" data-hover-hint="pageHeader">
+              <div class="header-content">
+                <img src="./img.jpeg" alt="Profile Picture" class="profile-image">
+                <p class="description">
+                  Greetings, my name is Mengting Ai. I am a second-year PhD Student of Information Sciences @ UIUC, advised by the fabulous <a href="https://www.hejingrui.org/">Prof. Jingrui He</a>. I also worked closely with <a href="http://tonghanghang.org/">Prof. Hanghang Tong</a>, <a href="https://ischool.illinois.edu/people/madelyn-rose-sanfilippo"> Prof. Madelyn Rose Sanfilippo</a>, and <a href="https://yueguo-50.github.io/">Prof. Yue Guo</a>.
+                  My research focuses on Efficient ML (specifically on LLM compression), AI Ethics, AI4Science, and LLM Safety.
+                </p>
+              </div>
+            </div>
 
-          <div class="page-content js-page-content" data-context="pages">
+            <div class="iframe-container">
+              <iframe title="Featured song on Spotify" style="border-radius:12px" src="https://open.spotify.com/embed/track/5VWC7v2dC2K0SIIjT9WTLN?utm_source=generator" width="80%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
+            <div class="page-content js-page-content" data-context="pages">
             <div id="project-canvas" class="js-project-modules modules content">
               <div id="project-modules">
                 <div class="js-project-module project-module module social_icons project-module-social_icons align-"
@@ -329,7 +427,23 @@
                 </div>
               </div>
             </div>
+            </div>
           </div>
+
+          <aside id="projects" class="project-sidebar" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Featured Projects</h2>
+            <article>
+              <span class="project-status">COLM 2026</span>
+              <h3>NIRVANA</h3>
+              <p class="project-subtitle">Structured Pruning Reimagined for Large Language Model Compression</p>
+              <p class="project-authors"><strong>Mengting Ai</strong>, Tianxin Wei, Sirui Chen, Jingrui He</p>
+              <div class="project-links">
+                <a href="https://arxiv.org/abs/2509.14230" target="_blank" rel="noopener">Paper</a>
+                <a href="https://github.com/iDEA-iSAIL-Lab-UIUC/NIRVANA" target="_blank" rel="noopener">Code</a>
+              </div>
+              <p class="project-note">Dedicated project page coming soon.</p>
+            </article>
+          </aside>
         </main>
 
         <footer class="site-footer" data-hover-hint="footer">
