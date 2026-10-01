@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171915">
+  <meta name="description" content="NIRVANA is an output-based structured pruning framework for large language models, with adaptive attention/MLP allocation and KL-guided calibration. COLM 2026.">
+  <meta property="og:title" content="NIRVANA — Structured Pruning Reimagined">
+  <meta property="og:description" content="Smaller language models, with attention to what matters. Research from the University of Illinois Urbana-Champaign, accepted at COLM 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://famous-blue-raincoat.github.io/mengtingai/projects/nirvana/">
+  <meta property="og:image" content="https://famous-blue-raincoat.github.io/mengtingai/projects/nirvana/assets/poster-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://famous-blue-raincoat.github.io/mengtingai/projects/nirvana/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>NIRVANA | COLM 2026</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap topbar">
+      <a class="back-link" href="../"><span aria-hidden="true">←</span> Mengting Ai <span class="nav-divider">/</span> Projects</a>
+      <nav aria-label="On this page">
+        <a href="#overview">Overview</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="paper-title">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-art">
+            <img src="assets/nirvana-band.png" alt="Illustration of the band Nirvana" width="1254" height="1254" fetchpriority="high">
+            <span class="art-note">A name inspired by the band.<br><a href="#soundtrack">Celebrating Nirvana ↘</a></span>
+          </div>
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="venue">COLM 2026</span><span>LLM compression</span></div>
+            <h1 id="paper-title"><span class="wordmark">NIRVANA</span><span class="paper-title">Structured Pruning Reimagined<br class="desktop-break"> for Large Language Model Compression</span></h1>
+            <p class="authors"><a href="../../home/">Mengting Ai</a><span>Tianxin Wei</span><span>Sirui Chen</span><span>Jingrui He</span></p>
+            <p class="affiliation">University of Illinois Urbana-Champaign</p>
+            <div class="resource-links" aria-label="Paper resources">
+              <a class="button button-primary" href="https://arxiv.org/abs/2509.14230" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="https://github.com/iDEA-iSAIL-Lab-UIUC/NIRVANA" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="assets/NIRVANA_COLM_2026_Poster.pdf" target="_blank" rel="noopener">Poster <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <p>Prune whole structures.<br><strong>Keep the model’s useful behavior.</strong></p>
+          <div class="institution-marks" aria-label="University and conference">
+            <img class="illinois-mark" src="assets/uiuc-logo.svg" alt="University of Illinois Urbana-Champaign" width="30" height="44">
+            <span class="mark-divider" aria-hidden="true"></span>
+            <img class="colm-mark" src="assets/colm-logo.svg" alt="COLM" width="100" height="52">
+            <span class="conference-year">2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap highlights" aria-label="Selected results">
+      <div><span class="metric">23.8<span class="metric-unit">%</span></span><p>MBPP pass@1</p><small>20% target sparsity, before LoRA.<br>LLM-Pruner: 4.4%.</small></div>
+      <div><span class="metric">62.11<span class="metric-unit">%</span></span><p>Average accuracy after LoRA</p><small>Llama3.1-8B, 20% target sparsity.<br>Before recovery: 55.09%.</small></div>
+      <div><span class="metric">1.57<span class="metric-unit">×</span></span><p>Inference throughput</p><small>50% target sparsity, A100, batch 32.<br>12.41 → 19.50 ktokens/s.</small></div>
+    </div>
+
+    <section class="soundtrack-section" id="soundtrack" aria-labelledby="soundtrack-title">
+      <div class="wrap soundtrack-layout">
+        <div class="soundtrack-copy">
+          <p class="soundtrack-kicker">A little love for our namesake</p>
+          <h2 id="soundtrack-title">Congratulations, Nirvana.</h2>
+          <p>Celebrating the band’s <strong>2026 MTV Video Vanguard Award</strong>. Thanks for the music that accompanies me through a long time.</p>
+          <a class="award-source" href="https://www.paramountpressexpress.com/mtv/shows/2026-mtv-video-music-awards-vmas/releases/?view=113230-nirvana-to-receive-video-vanguard-award-during-2026-mtv-video-music-awards-airing-live-sept-27-on-cbs" target="_blank" rel="noopener">The official announcement ↗</a>
+        </div>
+        <div class="soundtrack-player">
+          <iframe title="Smells Like Teen Spirit by Nirvana on Spotify" src="https://open.spotify.com/embed/track/6y1etHPLRsgA467gLBOgBm?theme=0" width="100%" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          <a href="https://open.spotify.com/track/6y1etHPLRsgA467gLBOgBm" target="_blank" rel="noopener">Smells Like Teen Spirit · Open in Spotify ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section overview" id="overview" aria-labelledby="overview-title">
+      <div class="section-intro">
+        <p class="section-index">01 / The question</p>
+        <h2 id="overview-title">What should a smaller<br>language model keep?</h2>
+        <p class="lead">LLMs are expensive to deploy. Structured pruning removes entire attention heads and MLP neurons, reducing model dimensions so the savings can translate into practical acceleration.</p>
+        <p>But compression can damage reasoning and code generation. NIRVANA asks how to remove whole structures while limiting changes to model outputs and retaining the ability to recover through fine-tuning.</p>
+      </div>
+      <div class="motivation">
+        <h3>Three things a pruning decision needs to respect.</h3>
+        <ol class="reason-list">
+          <li><span>01</span><div><h4>What the model outputs</h4><p>A unit’s importance depends on how much removing it changes the model function.</p></div></li>
+          <li><span>02</span><div><h4>Where the unit lives</h4><p>Layers and attention/MLP modules play different roles. Their pruning budgets should reflect those differences.</p></div></li>
+          <li><span>03</span><div><h4>Which data tells the story</h4><p>Calibration data affects saliency estimates. Select it by the behavior of the resulting pruned model.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="section-index">02 / The method</p><h2 id="method-title">From output impact<br>to structured decisions.</h2></div>
+          <p>Score individual weights, group dependent neurons or heads, then allocate pruning across layers and modules.</p>
+        </div>
+        <figure class="framework-figure">
+          <a class="figure-link" href="assets/framework-original.png" data-zoom data-title="NIRVANA framework" aria-label="Enlarge the original NIRVANA framework figure">
+            <img src="assets/framework-original.png" width="4372" height="1778" loading="lazy" decoding="async" alt="NIRVANA framework: weight-level saliency scoring, unit-level grouping of MLP neurons and attention heads, and model-level global pruning with adaptive attention/MLP allocation.">
+            <span class="zoom-label" aria-hidden="true">View full size ↗</span>
+          </a>
+          <figcaption>The original framework figure from the paper. <a href="assets/framework-original.png" target="_blank" rel="noopener">Open original image ↗</a></figcaption>
+        </figure>
+        <div class="method-steps">
+          <article>
+            <span class="step-number">01</span><h3>Output-based saliency</h3>
+            <p>Estimate the first-order effect of removing each weight, then aggregate the scores within a structural unit.</p>
+            <div class="equation">
+              <math display="block" aria-label="S of W i j equals the absolute value of the derivative of f with respect to W i j, times W i j">
+                <mrow><mi>S</mi><mo>(</mo><msub><mi>W</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>)</mo><mo>=</mo><mo>|</mo><mfrac><mrow><mo>∂</mo><mi>f</mi></mrow><mrow><mo>∂</mo><msub><mi>W</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></mfrac><msub><mi>W</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>|</mo></mrow>
+              </math>
+            </div>
+          </article>
+          <article>
+            <span class="step-number">02</span><h3>Flexible attention / MLP allocation</h3>
+            <p>Use global unit ranking for nonuniform layer sparsity. Balance the pruning rates of MLP neurons and attention heads through γ.</p>
+            <div class="equation">
+              <math display="block" aria-label="MLP sparsity equals gamma times attention sparsity"><mrow><msub><mi>v</mi><mtext>MLP</mtext></msub><mo>=</mo><mi>γ</mi><msub><mi>v</mi><mtext>Attn</mtext></msub></mrow></math>
+            </div>
+          </article>
+          <article>
+            <span class="step-number">03</span><h3>KL-guided calibration</h3>
+            <p>Prune with candidate calibration batches. Choose the batch whose pruned model has the smallest output KL divergence from the dense model on a fixed held-out anchor set.</p>
+            <div class="step-takeaway">Select data by the behavior it preserves.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="results" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div><p class="section-index">03 / The evidence</p><h2 id="results-title">Smaller models.<br>Useful capabilities.</h2></div>
+        <p>Evaluation on Llama3.1-8B spans language modeling, commonsense reasoning, math, and code generation, before and after LoRA recovery.</p>
+      </div>
+      <div class="results-layout">
+        <div class="results-summary">
+          <h3>A closer look</h3>
+          <p class="muted">Compare NIRVANA with LLM-Pruner.</p>
+          <div class="result-controls">
+            <fieldset class="segmented">
+              <legend>Target sparsity</legend>
+              <label><input type="radio" name="sparsity" value="20" checked><span>20%</span></label>
+              <label><input type="radio" name="sparsity" value="50"><span>50%</span></label>
+            </fieldset>
+            <fieldset class="segmented">
+              <legend>Recovery</legend>
+              <label><input type="radio" name="recovery" value="before" checked><span>Before LoRA</span></label>
+              <label><input type="radio" name="recovery" value="after"><span>After LoRA</span></label>
+            </fieldset>
+          </div>
+          <p id="result-state" class="result-state" aria-live="polite">Llama3.1-8B · 20% sparsity · Before LoRA</p>
+          <table class="result-table">
+            <caption>Scores in percent. Higher is better.</caption>
+            <thead><tr><th scope="col">Benchmark</th><th scope="col">NIRVANA</th><th scope="col">LLM-Pruner</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">MBPP</th><td id="ours-mbpp">23.80</td><td id="base-mbpp">4.40</td></tr>
+              <tr><th scope="row">SVAMP</th><td id="ours-svamp">49.00</td><td id="base-svamp">22.33</td></tr>
+              <tr><th scope="row">Avg. accuracy</th><td id="ours-avg">55.09</td><td id="base-avg">45.65</td></tr>
+            </tbody>
+          </table>
+          <p class="result-gap" id="result-gap">+9.44 points in average accuracy over LLM-Pruner.</p>
+          <p class="fine-print">MBPP: 3-shot pass@1. Sparsity is the pruning target, not the percentage reduction in total parameters. Full baseline comparisons are in the original table.</p>
+          <noscript><p class="fine-print">The summary shows 20% sparsity before LoRA. See the full table for all settings.</p></noscript>
+        </div>
+        <figure class="results-figure">
+          <a class="figure-link" href="assets/results-paper-screenshot.png" data-zoom data-title="Llama3.1-8B results" aria-label="Enlarge the complete results table from the paper">
+            <img src="assets/results-paper-screenshot.png" width="1888" height="1320" loading="lazy" decoding="async" alt="Full Llama3.1-8B results table from the paper, comparing LLM-Pruner, SliceGPT, FLAP, Tyr-the-Pruner, and NIRVANA at 20, 25, 33, and 50 percent target sparsity, with LoRA recovery results at 20 and 50 percent.">
+            <span class="zoom-label" aria-hidden="true">Read the full table ↗</span>
+          </a>
+          <figcaption>The full table, directly from the paper. Bold: best; underline: second-best. <a href="assets/results-paper-screenshot.png" target="_blank" rel="noopener">Open original ↗</a></figcaption>
+        </figure>
+      </div>
+      <div class="efficiency">
+        <div class="efficiency-intro"><h3>Practical inference gains</h3><p>Llama3.1-8B · 50% target sparsity<br>Single A100 · batch size 32</p></div>
+        <div><p class="efficiency-label">Throughput</p><p class="efficiency-value"><span>12.41</span><span class="arrow" aria-hidden="true">→</span><strong>19.50</strong></p><small>ktokens/s · 1.57× the dense model</small></div>
+        <div><p class="efficiency-label">Memory</p><p class="efficiency-value"><span>17.95</span><span class="arrow" aria-hidden="true">→</span><strong>11.27</strong></p><small>GB · dense → NIRVANA</small></div>
+      </div>
+    </section>
+
+    <section class="resource-section section" id="resources" aria-labelledby="resources-title">
+      <div class="wrap resources-layout">
+        <div class="resource-copy">
+          <p class="section-index">04 / Take it with you</p>
+          <h2 id="resources-title">The paper.<br> The code.<br> The conversation.</h2>
+          <p>Read the full method and experiments, explore the implementation, or download the COLM poster.</p>
+          <div class="text-links">
+            <a href="https://arxiv.org/abs/2509.14230" target="_blank" rel="noopener">Paper on arXiv <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/iDEA-iSAIL-Lab-UIUC/NIRVANA" target="_blank" rel="noopener">Code on GitHub <span aria-hidden="true">↗</span></a>
+            <a href="assets/NIRVANA_COLM_2026_Poster.pdf" download>Download the poster <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="contact"><span>Questions, ideas, or just saying hello?</span><a href="mailto:mai10@illinois.edu">mai10@illinois.edu <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="poster-figure">
+          <a href="assets/NIRVANA_COLM_2026_Poster.pdf" target="_blank" rel="noopener" aria-label="Open the NIRVANA COLM 2026 poster PDF">
+            <img src="assets/poster-preview.png" alt="Preview of the NIRVANA COLM 2026 conference poster" width="2016" height="1008" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span>COLM 2026 poster</span><span>72 × 36 inches · PDF</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="wrap section citation-section" id="citation" aria-labelledby="citation-title">
+      <div class="citation-intro"><p class="section-index">05 / Cite this work</p><h2 id="citation-title">BibTeX</h2><p>For the arXiv version of the paper.</p><a class="text-link" href="citation.bib" download>Download citation.bib ↓</a></div>
+      <div class="citation-block">
+        <button id="copy-citation" type="button">Copy BibTeX <span aria-hidden="true">⧉</span></button>
+        <pre><code id="bibtex">@misc{ai2025nirvana,
+  title = {NIRVANA: Structured Pruning Reimagined
+           for Large Language Model Compression},
+  author = {Mengting Ai and Tianxin Wei and
+            Sirui Chen and Jingrui He},
+  year = {2025},
+  eprint = {2509.14230},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2509.14230}
+}</code></pre>
+        <span id="copy-status" class="sr-only" role="status"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-content">
+      <div><a class="footer-wordmark" href="#main">NIRVANA</a><p>Research by Mengting Ai, Tianxin Wei, Sirui Chen, and Jingrui He.</p></div>
+      <div class="footer-links"><a href="../../home/">Mengting Ai ↗</a><a href="../">All projects ↗</a><a href="#soundtrack">The soundtrack ↑</a></div>
+    </div>
+  </footer>
+
+  <dialog id="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="dialog-header"><h2 id="figure-dialog-title">Figure</h2><div><a id="original-image-link" href="assets/framework-original.png" target="_blank" rel="noopener">Open original ↗</a><button id="close-figure" type="button" aria-label="Close enlarged figure">Close ×</button></div></div>
+    <div class="dialog-body"><img id="enlarged-figure" alt=""></div>
+    <p class="dialog-hint">Scroll to inspect the image. Press Escape to close.</p>
+  </dialog>
+</body>
+</html>
