@@ -1,5 +1,13 @@
 Hello, this is my home page :)
 
+## Site analytics
+
+Every public content page records production visits with the existing
+`fandom-page.goatcounter.com` GoatCounter site. The Google Search Console
+verification file is intentionally excluded. The tracker is cookie-free and
+ignores local previews, so opening pages from the filesystem during editing does
+not add visits.
+
 ## Updating the CV
 
 Replace `files/Mengting_Ai_CV.pdf` with the new PDF and keep the filename unchanged. The public CV URL and every link on the site will continue to work after the update is pushed to `main`.
