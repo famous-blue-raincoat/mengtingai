@@ -1,0 +1,22 @@
+{
+  "capital-one.svg": {
+    "source": "https://commons.wikimedia.org/wiki/File:Capital_One_logo.svg",
+    "original": "https://capitalone.co.uk/images/c1/brand/logo.svg"
+  },
+  "illinois-block-i.svg": {
+    "source": "https://cdn.brand.illinois.edu/logos/block-i.svg",
+    "guidelines": "https://brand.illinois.edu/visual-identity/logo"
+  },
+  "te-connectivity.svg": {
+    "source": "https://commons.wikimedia.org/wiki/File:TE_Connectivity_logo.svg",
+    "original": "http://www.te.com/_TEincludes/ver/1499/v2/images/te-connectivity-logo.svg"
+  },
+  "iscas-icon.png": {
+    "source": "https://is.cas.cn/images/icon-logo.png",
+    "organization": "https://www.is.cas.cn/"
+  },
+  "baidu.svg": {
+    "source": "https://cdn.simpleicons.org/baidu",
+    "project": "https://simpleicons.org/"
+  }
+}
